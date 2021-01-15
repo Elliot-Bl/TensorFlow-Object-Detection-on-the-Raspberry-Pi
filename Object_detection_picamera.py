@@ -24,9 +24,11 @@ import cv2
 import numpy as np
 from picamera.array import PiRGBArray
 from picamera import PiCamera
-import tensorflow as tf
+import tensorflow.compat.v1 as tf
 import argparse
 import sys
+
+tf.disable_v2_behavior()
 
 # Set up camera constants
 IM_WIDTH = 1280
